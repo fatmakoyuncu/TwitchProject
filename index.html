@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch</title>
+</head>
+
+<link rel="stylesheet" href="stil.css">
+
+<body>
+    <div class="container">
+        <div class="main-nav">
+            <div class="nav-left">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    id="Capa_1" width="25px" heigth="25px" x="0px" y="0px" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <path style="fill:#673AB7;"
+                            d="M48,0L16,96v352h128v64h64l64-64h96l128-136.32V0H48z M464,288l-89.6,96H260.928L192,434.144V384H80   V32h384V288z" />
+                        <rect x="240" y="128" style="fill:#673AB7;" width="32" height="128" />
+                        <rect x="336" y="128" style="fill:#673AB7;" width="32" height="128" />
+                    </g>
+
+                </svg>
+
+                <p class="browse">Gözat</p>
+
+                <hr>
+
+                <p class="espor">Espor</p>
+
+                <p class="music">Müzik</p>
+
+                <button onclick="showFunction()" class="more-button">
+                    <svg width="25px" height="25px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" class="more-icon">
+                        <g>
+                            <path
+                                d="M2 10a2 2 0 114 0 2 2 0 01-4 0zM8 10a2 2 0 114 0 2 2 0 01-4 0zM16 8a2 2 0 100 4 2 2 0 000-4z">
+                            </path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+            <div class="middle">
+                <form>
+                    <input type="search" placeholder="Ara">
+
+                    <svg width="25px" height="25px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"
+                        class="search-icon">
+                        <g>
+                            <path fill-rule="evenodd"
+                                d="M13.192 14.606a7 7 0 111.414-1.414l3.101 3.1-1.414 1.415-3.1-3.1zM14 9A5 5 0 114 9a5 5 0 0110 0z"
+                                clip-rule="evenodd"></path>
+                        </g>
+                    </svg>
+                </form>
+            </div>
+            <div class="nav-right">
+                <!-- <li>yeni prime ganimeti</li> -->
+                <button onclick="showFunction2()" class="prime-icon-button">
+                    <svg width="25px" height="25px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"
+                        class="prime-icon">
+                        <g>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M13.798 10.456L10 6.657l-3.798 3.799L4 8.805V13h12V8.805l-2.202 1.65zM18 5v8a2 2 0 0 1-2 2H4a2.002 2.002 0 0 1-2-2V5l4 3 4-4 4 4 4-3z">
+                            </path>
+                        </g>
+                    </svg>
+                </button>
+                <button onclick="showFunction3()" class="login-button">
+                    <b>Oturum Aç</b>
+                </button>
+                <button onclick="showFunction5()" class="singin-button">
+                    <b>Kayıt ol</b>
+                </button>
+
+                <button onclick="showFunction4()" class="menu-icon-button">
+                    <svg width="22px" height="22px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" class="menu-icon">
+                        <g>
+                            <path fill-rule="evenodd"
+                                d="M5 7a5 5 0 116.192 4.857A2 2 0 0013 13h1a3 3 0 013 3v2h-2v-2a1 1 0 00-1-1h-1a3.99 3.99 0 01-3-1.354A3.99 3.99 0 017 15H6a1 1 0 00-1 1v2H3v-2a3 3 0 013-3h1a2 2 0 001.808-1.143A5.002 5.002 0 015 7zm5 3a3 3 0 110-6 3 3 0 010 6z"
+                                clip-rule="evenodd"></path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-left">
+                <div class="content-left-top">
+                    <div class="header-row">
+                        <h2><b>ÖNERİLEN KANALLAR</b></h2>
+                        <svg width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"
+                            class="constriction-icon">
+                            <g>
+                                <path d="M16 16V4h2v12h-2zM6 9l2.501-2.5-1.5-1.5-5 5 5 5 1.5-1.5-2.5-2.5h8V9H6z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="row">
+                        <img class="user-photo" alt="Elraenn"
+                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/0294fec8-8572-4517-9b60-12e0705a8893-profile_image-70x70.png">
+                        <div class="userinfo">
+                            <div class="username">
+                                <p class="user-header"><b>Elraenn</b></p>
+                                <p class="user-statu">Sadece Sohbet</p>
+                            </div>
+                        </div>
+                        <div class="live-statu">
+                            <img class="red-point" src="red_point.jpg">
+                            <p class="follower">33,1 B</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img class="user-photo" alt="pqueen"
+                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/1c805ffa-1f34-4aa9-8409-015dd151d4b1-profile_image-70x70.png">
+                        <div class="userinfo">
+                            <div class="username">
+                                <p class="user-header"><b>pqueen</b></p>
+                                <p class="user-statu">Sadece Sohbet</p>
+                            </div>
+                        </div>
+                        <div class="live-statu">
+                            <img class="red-point" src="red_point.jpg">
+                            <p class="follower">13,6 B</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img class="user-photo" alt="Adal"
+                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/c018eaf1-237d-4cde-9718-fbf29266f057-profile_image-70x70.png">
+                        <div class="userinfo">
+                            <div class="username">
+                                <p class="user-header"><b>Adal</b></p>
+                                <p class="user-statu">Minecraft</p>
+                            </div>
+                        </div>
+                        <div class="live-statu">
+                            <img class="red-point" src="red_point.jpg">
+                            <p class="follower">3,5 B</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img class="user-photo" alt="LEGOO"
+                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/665e110c-d307-4d13-b21c-42b72d22eb84-profile_image-70x70.png">
+                        <div class="userinfo">
+                            <div class="username">
+                                <p class="user-header"><b>LEGOO</b></p>
+                                <p class="user-statu">VALORANT</p>
+                            </div>
+                        </div>
+                        <div class="live-statu">
+                            <img class="red-point" src="red_point.jpg">
+                            <p class="follower">11,5 B</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img class="user-photo" alt="Eylul"
+                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/a31e6746-6c98-4324-8fd1-2af57125d033-profile_image-70x70.png">
+                        <div class="userinfo">
+                            <div class="username">
+                                <p class="user-header"><b>Eylul</b></p>
+                                <p class="user-statu">VALORANT</p>
+                            </div>
+                        </div>
+                        <div class="live-statu">
+                            <img class="red-point" src="red_point.jpg">
+                            <p class="follower">918</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img class="user-photo" alt="Elwind"
+                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/54799134-a516-49bb-8d80-389551c0682f-profile_image-70x70.jpg">
+                        <div class="userinfo">
+                            <div class="username">
+                                <p class="user-header"><b>Elwind</b></p>
+                                <p class="user-statu">League of Legends</p>
+                            </div>
+                        </div>
+                        <div class="live-statu">
+                            <img class="red-point" src="red_point.jpg">
+                            <p class="follower">9,5 B</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img class="user-photo" alt="larsahan"
+                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/2633b4f1-a2b7-460e-981f-ef8ff649fcb7-profile_image-70x70.png">
+                        <div class="userinfo">
+                            <div class="username">
+                                <p class="user-header"><b>larsahan</b></p>
+                                <p class="user-statu">League of Legends</p>
+                            </div>
+                        </div>
+                        <div class="live-statu">
+                            <img class="red-point" src="red_point.jpg">
+                            <p class="follower">842</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img class="user-photo" alt="Crystal_LoL"
+                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/crystal_lol-profile_image-508085255f7cc437-70x70.jpeg">
+                        <div class="userinfo">
+                            <div class="username">
+                                <p class="user-header"><b>Crystal_LoL</b></p>
+                                <p class="user-statu">League of Legends</p>
+                            </div>
+                        </div>
+                        <div class="live-statu">
+                            <img class="red-point" src="red_point.jpg">
+                            <p class="follower">593</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img class="user-photo" alt="boxbox"
+                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/8f56178e-94ea-4278-9ab9-cca5d541bc47-profile_image-70x70.jpeg">
+                        <div class="userinfo">
+                            <div class="username">
+                                <p class="user-header"><b>boxbox</b></p>
+                                <p class="user-statu">League of Legends</p>
+                            </div>
+                        </div>
+                        <div class="live-statu">
+                            <img class="red-point" src="red_point.jpg">
+                            <p class="follower">21,6 B</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img class="user-photo" alt="KAANFLIX"
+                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/f050496e-890b-4f34-a7e8-1655c208e6ea-profile_image-70x70.png">
+                        <div class="userinfo">
+                            <div class="username">
+                                <p class="user-header"><b>KAANFLIX</b></p>
+                                <p class="user-statu">Little Nightmares</p>
+                            </div>
+                        </div>
+                        <div class="live-statu">
+                            <img class="red-point" src="red_point.jpg">
+                            <p class="follower">2,2 B</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-left-bottom">
+                    <div class="content-info-border">
+                        <div class="content-info">
+                            <p class="info-header"><span class="twitch-span">Twitch</span> topluluğuna <br>katılın!</p>
+                            <p class="info-text">Dilediğiniz yerden en iyi <br>canlı yayınları keşfedin</p>
+                        </div>
+                        <div class="content-info-button">
+                            <button class="singin-button2">Kayıt Ol</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-right">
+                <div class="content-right-top">
+                    <div class="broadcasts">
+                        <div class="arrow-button">
+                            <svg class="left-button" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                                viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <polygon
+                                            points="207.093,30.187 176.907,0 48.907,128 176.907,256 207.093,225.813 109.28,128   " />
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="top-video">
+
+                            <div class="video-image">
+                                <img alt="HighRollers - UK D&amp;D" data-test-selector="featured-item-image"
+                                    class="video-image"
+                                    src="https://static-cdn.jtvnw.net/previews-ttv/live_user_yogscast-320x180.jpg">
+                            </div>
+
+                            <div class="video-content">
+                                <div class="video-content-header">
+                                    <div class="user-video-photo">
+                                        <img class="user-video-photo" alt="Elraenn"
+                                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/0294fec8-8572-4517-9b60-12e0705a8893-profile_image-70x70.png">
+                                    </div>
+                                    <div class="user-info">
+                                        <p class="video-user-header">Elraenn</p>
+                                        <p class="video-user-statu">Sadece Sohbet</p>
+                                        <p class="video-follower">33,1 B izleyici</p>
+                                    </div>
+                                </div>
+                                <div class="video-lang">
+                                    <a class="lang">Türkçe</a>
+                                </div>
+                                <div class="video-comment">
+                                    Merhaba ben Furkan Arıkovan. Dark Passage takımının koçuyum,
+                                    yayınlarımda LoL oynayarak, izleyicilerimi eğitirken eğlendirmeye, eğlenirken
+                                    ağlatmaya, ağlarken teselli etmeye özen gösteriyorum.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="arrow-button">
+                            <svg class="right-button" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" weight="25px" ;
+                                height="25px" ; x="0px" y="0px" viewBox="0 0 256 256"
+                                style="enable-background:new 0 0 256 256;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <polygon
+                                            points="79.093,0 48.907,30.187 146.72,128 48.907,225.813 79.093,256 207.093,128   " />
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-right-bottom">
+                    <div class="live-broadcast">
+                        <div class="head">Seveceğinizi düşündüğümüz Canlı kanallar</div>
+                        <div class="live-channel">
+                            <div class="live-channel-1">
+                                <div class="live-channel-img">
+                                    <img alt="DEV EKİPMAN ÇEKİLİŞİ ŞİMDİ AÇIKLANIYOR" class="live-channel-img"
+                                        src="https://static-cdn.jtvnw.net/previews-ttv/live_user_cinar-440x248.jpg">
+                                </div>
+                                <div class="channel-header">
+                                    <div class="channel-logo">
+                                        <img class="channel-logo" alt="Cinar"
+                                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/7baa849d-24c5-4a58-8127-84e46d7be876-profile_image-50x50.png">
+                                    </div>
+                                    <div class="channel-comment">
+                                        <div class="channel-subtitle">DEV EKİPMAN ÇEKİLİŞİ ŞİMDİ AÇIKLANIYOR</div>
+                                        <div class="channel-name">Cinar</div>
+                                        <div class="channel-statu">Sadece Sohbet</div>
+                                        <div class="channel-language"><a class="channel-lang">Türkçe</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="live-channel-2">
+                                <div class="live-channel-img">
+                                    <img alt="Mekiple Rocket Misali !dc !youtube" class="live-channel-img"
+                                        src="https://static-cdn.jtvnw.net/previews-ttv/live_user_cinar-440x248.jpg">
+                                </div>
+                                <div class="channel-header">
+                                    <div class="channel-logo">
+                                        <img class="channel-logo" alt="pqueen"
+                                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/1c805ffa-1f34-4aa9-8409-015dd151d4b1-profile_image-70x70.png">
+                                    </div>
+                                    <div class="channel-comment">
+                                        <div class="channel-subtitle">Mekiple Rocket Misali !dc !youtube</div>
+                                        <div class="channel-name">pqueen</div>
+                                        <div class="channel-statu">Rocket League</div>
+                                        <div class="channel-language"><a class="channel-lang">Türkçe</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="live-channel-3">
+                                <div class="live-channel-img">
+                                    <img alt="BÜYÜK ÇEKİLİŞ BUGÜN 19:00'da" class="live-channel-img"
+                                        src="https://static-cdn.jtvnw.net/previews-ttv/live_user_cinar-440x248.jpg">
+                                </div>
+                                <div class="channel-header">
+                                    <div class="channel-logo">
+                                        <img class="channel-logo" alt="Elwind"
+                                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/54799134-a516-49bb-8d80-389551c0682f-profile_image-70x70.jpg">
+                                    </div>
+                                    <div class="channel-comment">
+                                        <div class="channel-subtitle">BÜYÜK ÇEKİLİŞ BUGÜN 19:00'da</div>
+                                        <div class="channel-name">Elwind</div>
+                                        <div class="channel-statu">VALORANT</div>
+                                        <div class="channel-language"><a class="channel-lang">Türkçe</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="show-more">
+                        <div class="show-more-line">
+                            <hr />
+                        </div>
+                        <div class="show-more-middle">
+                            <div class="show-more-text">
+                                <p>Daha fazla göster</p>
+                            </div>
+                            <div>
+                                <svg type="color-fill-current" width="20px" height="20px" version="1.1"
+                                    viewBox="0 0 20 20" x="0px" y="0px" class="show-more-icon">
+                                    <g>
+                                        <path d="M14.5 6.5L10 11 5.5 6.5 4 8l6 6 6-6-1.5-1.5z"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="show-more-line">
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <div class="head">
+                            <span>Seveceğinizi düşündüğümüz&nbsp; </span>
+                            <a class="category-link">
+                                <strong>Kategoriler</strong>
+                            </a>
+                        </div>
+                        <div class="categories">
+                            <div class="category-a">
+                                <div class="category-img">
+                                    <img alt="Sadece Sohbet kapak resmi" class="category-img"
+                                        src="https://static-cdn.jtvnw.net/ttv-boxart/Just%20Chatting-188x250.jpg">
+                                </div>
+                                <div class="category-comment">
+                                    <div class="category-statu">Sadece Sohbet</div>
+                                    <div class="category-follower">252 B izleyici</div>
+                                    <div class="category-language"><a class="category-lang">IRL</a></div>
+                                </div>
+                            </div>
+                            <div class="category-a">
+                                <div class="category-img">
+                                    <img alt="VALORANT kapak resmi" class="category-img"
+                                        src="https://static-cdn.jtvnw.net/ttv-boxart/VALORANT-188x250.jpg">
+                                </div>
+                                <div class="category-comment">
+                                    <div class="category-statu">VALORANT</div>
+                                    <div class="category-follower">76,3 B izleyici</div>
+                                    <div class="category-language"><a class="category-lang">Nişancı Oyunu</a></div>
+                                </div>
+                            </div>
+                            <div class="category-a">
+                                <div class="category-img">
+                                    <img alt="League of Legends kapak resmi" class="category-img"
+                                        src="https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-188x250.jpg">
+                                </div>
+                                <div class="category-comment">
+                                    <div class="category-statu"> League of Legends</div>
+                                    <div class="category-follower">212,6 B izleyici</div>
+                                    <div class="category-language"><a class="category-lang">MOBA</a></div>
+                                </div>
+                            </div>
+                            <div class="category-a">
+                                <div class="category-img">
+                                    <img alt="Minecraft kapak resmi" class="category-img"
+                                        src="https://static-cdn.jtvnw.net/ttv-boxart/Minecraft-188x250.jpg">
+                                </div>
+                                <div class="category-comment">
+                                    <div class="category-statu">Minecraft</div>
+                                    <div class="category-follower">78,8 B izleyici</div>
+                                    <div class="category-language"><a class="category-lang">Macera Oyunu</a></div>
+                                </div>
+                            </div>
+                            <div class="category-a">
+                                <div class="category-img">
+                                    <img alt="Rust kapak resmi" class="category-img"
+                                        src="https://static-cdn.jtvnw.net/ttv-boxart/Rust-188x250.jpg">
+                                </div>
+                                <div class="category-comment">
+                                    <div class="category-statu">Rust</div>
+                                    <div class="category-follower">43,7 B izleyici</div>
+                                    <div class="category-language"><a class="category-lang">Macera Oyunu</a></div>
+                                </div>
+                            </div>
+                            <div class="category-a">
+                                <div class="category-img">
+                                    <img alt="Counter-Strike: Global Offensive kapak resmi" class="category-img"
+                                        src="https://static-cdn.jtvnw.net/ttv-boxart/./Counter-Strike:%20Global%20Offensive-188x250.jpg">
+                                </div>
+                                <div class="category-comment">
+                                    <div class="category-statu">Counter-Strike</div>
+                                    <div class="category-follower">154,5 B izleyici</div>
+                                    <div class="category-language"><a class="category-lang">Birinci Şahıs Nişancı</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="line">
+                        <hr />
+                    </div>
+
+                    <div class="live-broadcast">
+                        <div class="head">Seveceğinizi düşündüğümüz Canlı kanallar</div>
+                        <div class="live-channel">
+                            <div class="live-channel-1">
+                                <div class="live-channel-img">
+                                    <img alt="DEV EKİPMAN ÇEKİLİŞİ ŞİMDİ AÇIKLANIYOR" class="live-channel-img"
+                                        src="https://static-cdn.jtvnw.net/previews-ttv/live_user_cinar-440x248.jpg">
+                                </div>
+                                <div class="channel-header">
+                                    <div class="channel-logo">
+                                        <img class="channel-logo" alt="Cinar"
+                                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/7baa849d-24c5-4a58-8127-84e46d7be876-profile_image-50x50.png">
+                                    </div>
+                                    <div class="channel-comment">
+                                        <div class="channel-subtitle">DEV EKİPMAN ÇEKİLİŞİ ŞİMDİ AÇIKLANIYOR</div>
+                                        <div class="channel-name">Cinar</div>
+                                        <div class="channel-statu">Sadece Sohbet</div>
+                                        <div class="channel-language"><a class="channel-lang">Türkçe</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="live-channel-2">
+                                <div class="live-channel-img">
+                                    <img alt="Mekiple Rocket Misali !dc !youtube" class="live-channel-img"
+                                        src="https://static-cdn.jtvnw.net/previews-ttv/live_user_cinar-440x248.jpg">
+                                </div>
+                                <div class="channel-header">
+                                    <div class="channel-logo">
+                                        <img class="channel-logo" alt="pqueen"
+                                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/1c805ffa-1f34-4aa9-8409-015dd151d4b1-profile_image-70x70.png">
+                                    </div>
+                                    <div class="channel-comment">
+                                        <div class="channel-subtitle">Mekiple Rocket Misali !dc !youtube</div>
+                                        <div class="channel-name">pqueen</div>
+                                        <div class="channel-statu">Rocket League</div>
+                                        <div class="channel-language"><a class="channel-lang">Türkçe</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="live-channel-3">
+                                <div class="live-channel-img">
+                                    <img alt="BÜYÜK ÇEKİLİŞ BUGÜN 19:00'da" class="live-channel-img"
+                                        src="https://static-cdn.jtvnw.net/previews-ttv/live_user_cinar-440x248.jpg">
+                                </div>
+                                <div class="channel-header">
+                                    <div class="channel-logo">
+                                        <img class="channel-logo" alt="Elwind"
+                                            src="https://static-cdn.jtvnw.net/jtv_user_pictures/54799134-a516-49bb-8d80-389551c0682f-profile_image-70x70.jpg">
+                                    </div>
+                                    <div class="channel-comment">
+                                        <div class="channel-subtitle">BÜYÜK ÇEKİLİŞ BUGÜN 19:00'da</div>
+                                        <div class="channel-name">Elwind</div>
+                                        <div class="channel-statu">VALORANT</div>
+                                        <div class="channel-language"><a class="channel-lang">Türkçe</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="show-more">
+                        <div class="show-more-line">
+                            <hr />
+                        </div>
+                        <div class="show-more-middle">
+                            <div class="show-more-text">
+                                <p>Daha fazla göster</p>
+                            </div>
+                            <div>
+                                <svg type="color-fill-current" width="20px" height="20px" version="1.1"
+                                    viewBox="0 0 20 20" x="0px" y="0px" class="show-more-icon">
+                                    <g>
+                                        <path d="M14.5 6.5L10 11 5.5 6.5 4 8l6 6 6-6-1.5-1.5z"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="show-more-line">
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="show" class="dialog-layer">
+            <div class="layer">
+                <div class="dialog-header">
+                    <p>GENEL</p>
+                </div>
+
+                <div class="dialog-row">
+                    <a class="dialog-row-1">Basın</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-2">Blog</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-3">Geliştiriciler</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-4">Hakkımızda</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-5">IGDB</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-6">İş Olanakları</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-7">Loot Case - Mağaza</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-8">Partnerler</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-9">Reklamcılar</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-10">Turbo</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-11">Twitch Gift Card</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-12">Uygulama İndirin</a>
+                </div>
+                <div class="dialog-row">
+                    <hr />
+                </div>
+                <div class="dialog-header">
+                    <p>YARDIM VE YASAL BİLGİLER</p>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-12">Çerez Politikası</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-12">Erişilebilirlik Beyanı</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-12">Gizlilik Politikası</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-12">Güvenlik</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-12">Reklam Seçenekleri</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-12">Şartlar</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-12">Topluluk İlkeleri</a>
+                </div>
+                <div class="dialog-row">
+                    <a class="dialog-row-12">Yardım</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="show-login" class="login-layer">
+            <div class="login">
+                <div class="login-layer-in">
+                    <div class="login-layer-header">
+                        <svg type="color-fill-brand" width="40px" height="40px" version="1.1" viewBox="0 0 24 28"
+                            x="0px" y="0px" class="ScSvg-sc-1j5mt50-1 fDPtHy">
+                            <g fill-rule="evenodd">
+                                <path
+                                    d="M19 6v6h-2V6h2zm-7 0h2v6h-2V6zM5 0L0 5v18h6v5l5-5h4l9-9V0H5zm17 13l-4 4h-4l-4 4v-4H6V2h16v11z">
+                                </path>
+                                <path d="M18 17l4-4V2H6v15h4v4l4-4h4zM12 6h2v6h-2V6zm7 0h-2v6h2V6z" fill="#FFF"></path>
+                            </g>
+                        </svg>
+                        <h4 class="layer-header">Twitch'te oturum açın</h4>
+                    </div>
+                    <div class="choose">
+                        <button class="login-link">Oturum Aç</button>
+                        <button class="singin-link">Kaydol</button>
+                    </div>
+                    <div>
+                        <hr />
+                    </div>
+
+                    <div class="login-form">
+                        <form class="username-form">
+                            <div class="login-username">Kullanıcı Adı</div>
+                            <input class="username-input" type="text">
+                        </form>
+                        <form class="password-form">
+                            <div class="password">Şifre</div>
+                            <input class="password-input" type="text">
+                        </form>
+                        <div class="login-problem">
+                            <a>Oturum açılırken sorun mu oluştu?</a>
+                        </div>
+                        <div class="login-form-button">
+                            <button>
+                                <div class="login-layer-singin">Oturum Aç</div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="or-line">
+                        <div class="line">
+                            <hr />
+                            <p>veya</p>
+                            <hr />
+                        </div>
+                        <div class="fb-connect">
+                            <button>
+                                <svg type="color-fill-current" width="30px" height="30px" version="1.1"
+                                    viewBox="0 0 20 20" x="0px" y="0px" class="ScSvg-sc-1j5mt50-1 jLaQtw">
+                                    <g>
+                                        <path
+                                            d="M15.341 4H4.663A.663.663 0 004 4.663v10.674c0 .366.297.663.663.663h5.75v-4.631H8.845V9.543h1.56V8.21c0-1.552.946-2.396 2.329-2.396.47.001.94.028 1.407.08v1.619h-.958c-.751 0-.896.355-.896.88v1.158h1.8l-.234 1.817h-1.566V16h3.054a.663.663 0 00.663-.663V4.663A.663.663 0 0015.34 4h.001z">
+                                        </path>
+                                    </g>
+                                </svg>
+                                <p>
+                                    Facebook ile bağlan
+                                </p>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="login-layer-button">
+                    <button onclick="document.getElementById('show-login').style.display='none';">
+                        <svg width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"
+                            class="ScIconSVG-sc-1bgeryd-1 cMQeyU">
+                            <g>
+                                <path
+                                    d="M8.5 10L4 5.5 5.5 4 10 8.5 14.5 4 16 5.5 11.5 10l4.5 4.5-1.5 1.5-4.5-4.5L5.5 16 4 14.5 8.5 10z">
+                                </path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="show-singin" class="singin-layer">
+            <div class="singin">
+                <div class="singin-layer-in">
+                    <div class="singin-layer-header">
+                        <svg type="color-fill-brand" width="40px" height="40px" version="1.1" viewBox="0 0 24 28"
+                            x="0px" y="0px" class="ScSvg-sc-1j5mt50-1 fDPtHy">
+                            <g fill-rule="evenodd">
+                                <path
+                                    d="M19 6v6h-2V6h2zm-7 0h2v6h-2V6zM5 0L0 5v18h6v5l5-5h4l9-9V0H5zm17 13l-4 4h-4l-4 4v-4H6V2h16v11z">
+                                </path>
+                                <path d="M18 17l4-4V2H6v15h4v4l4-4h4zM12 6h2v6h-2V6zm7 0h-2v6h2V6z" fill="#FFF"></path>
+                            </g>
+                        </svg>
+                        <h4 class="layer-header">Twitch'e bugün katılın</h4>
+                    </div>
+                    <div class="choose">
+                        <button class="login-link">Oturum Aç</button>
+                        <button class="singin-link">Kaydol</button>
+                    </div>
+                    <div>
+                        <hr />
+                    </div>
+
+                    <div class="singin-form">
+                        <form class="username-form">
+                            <div class="login-username">Kullanıcı Adı</div>
+                            <input class="username-input" type="text">
+                        </form>
+                        <form class="password-form">
+                            <div class="password">Şifre</div>
+                            <input class="password-input" type="text">
+                        </form>
+                        <form class="password-form">
+                            <div class="password">Parolayı Onaylayın</div>
+                            <input class="password-input" type="text">
+                        </form>
+                        <form class="bday-form">
+                            <div class="login-username">Doğum Tarihi</div>
+                            <div class="bday">
+                                <input class="day" type="text" placeholder="Gün">
+                                <input class="month" type="text" placeholder="Ay">
+                                <input class="year" type="text" placeholder="Yıl">
+                            </div>
+                        </form>
+                        <form class="password-form">
+                            <div class="password">E-posta</div>
+                            <input class="password-input" type="text">
+                        </form>
+                    </div>
+                    <div class="singin-form-button">
+                        <div>
+                            <p class="contract">Kayıt Ol' u tıklayarak, Hizmet Şartları' nı ve Gizlilik Bildirimini'
+                                nı okuduğunuzu
+                                ve onayladığınızı beyaz etmiş olursunuz.</p>
+
+                        </div>
+                        <button>
+                            <div class="login-layer-singin">Kaydol</div>
+                        </button>
+
+
+                    </div>
+
+                </div>
+                <div class="login-layer-button">
+                    <button onclick="document.getElementById('show-singin').style.display='none';">
+                        <svg width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"
+                            class="ScIconSVG-sc-1bgeryd-1 cMQeyU">
+                            <g>
+                                <path
+                                    d="M8.5 10L4 5.5 5.5 4 10 8.5 14.5 4 16 5.5 11.5 10l4.5 4.5-1.5 1.5-4.5-4.5L5.5 16 4 14.5 8.5 10z">
+                                </path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="show-menu" class="menu-layer">
+            <div class="menu">
+                <div class="menu-row">
+                    <svg width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" class="svg-1">
+                        <g>
+                            <path fill-rule="evenodd"
+                                d="M10 2c4.415 0 8 3.585 8 8s-3.585 8-8 8-8-3.585-8-8 3.585-8 8-8zm5.917 9a6.015 6.015 0 01-3.584 4.529A10 10 0 0013.95 11h1.967zm0-2a6.015 6.015 0 00-3.584-4.529A10 10 0 0113.95 9h1.967zm-3.98 0A8.002 8.002 0 0010 4.708 8.002 8.002 0 008.063 9h3.874zm-3.874 2A8.002 8.002 0 0010 15.292 8.002 8.002 0 0011.937 11H8.063zM6.05 11a10 10 0 001.617 4.529A6.014 6.014 0 014.083 11H6.05zm0-2a10 10 0 011.617-4.529A6.014 6.014 0 004.083 9H6.05z"
+                                clip-rule="evenodd"></path>
+                        </g>
+                    </svg>
+
+                    <a class="menu-row-1">Dil</a>
+
+                    <svg width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" class="svg-2">
+                        <g>
+                            <path d="M6.5 5.5L11 10l-4.5 4.5L8 16l6-6-6-6-1.5 1.5z"></path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="menu-row">
+                    <svg width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" class="svg-1">
+                        <g>
+                            <path fill-rule="evenodd"
+                                d="M8.614 2.134a8.001 8.001 0 001.388 15.879 8.003 8.003 0 007.884-6.635 6.947 6.947 0 01-2.884.62 7.004 7.004 0 01-6.388-9.864zM6.017 5.529a5.989 5.989 0 00-2.015 4.484c0 3.311 2.69 6 6 6a5.99 5.99 0 004.495-2.028 9.006 9.006 0 01-8.48-8.456z"
+                                clip-rule="evenodd"></path>
+                        </g>
+                    </svg>
+                    <a class="menu-row-1">Koyu Tema</a>
+                    <svg class="svg-2" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -107 512 512"
+                        width="30px">
+                        <path
+                            d="m362.667969 0h-213.335938c-82.324219 0-149.332031 66.988281-149.332031 149.332031 0 82.347657 67.007812 149.335938 149.332031 149.335938h213.335938c82.324219 0 149.332031-66.988281 149.332031-149.335938 0-82.34375-67.007812-149.332031-149.332031-149.332031zm-213.335938 234.667969c-47.058593 0-85.332031-38.273438-85.332031-85.335938 0-47.058593 38.273438-85.332031 85.332031-85.332031 47.0625 0 85.335938 38.273438 85.335938 85.332031 0 47.0625-38.273438 85.335938-85.335938 85.335938zm0 0" />
+                    </svg>
+                </div>
+                <div class="menu-row">
+                    <hr />
+                </div>
+                <div class="menu-row">
+                    <svg width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" class="svg-1">
+                        <g>
+                            <path
+                                d="M16 18h-4a2 2 0 01-2-2v-2h2v2h4V4h-4v2h-2V4a2 2 0 012-2h4a2 2 0 012 2v12a2 2 0 01-2 2z">
+                            </path>
+                            <path d="M7 5l1.5 1.5L6 9h8v2H6l2.5 2.5L7 15l-5-5 5-5z"></path>
+                        </g>
+                    </svg>
+                    <a class="menu-row-1">Oturum Aç</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="show-prime" class="prime-layer">
+
+            <div class="prime-nav">
+                <div class="prime-navbar-in">
+                    <div class="prime-navbar">
+                        <h5>Prime Gaming Ganimeti</h5>
+                        <p>2 Yeni Öğe!</p>
+                    </div>
+                    <div class="prime-navbar-2">
+                        <button onclick="document.getElementById('show-prime').style.display='none';">
+                            <svg width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"
+                                class="ScIconSVG-sc-1bgeryd-1 cMQeyU">
+                                <g>
+                                    <path
+                                        d="M8.5 10L4 5.5 5.5 4 10 8.5 14.5 4 16 5.5 11.5 10l4.5 4.5-1.5 1.5-4.5-4.5L5.5 16 4 14.5 8.5 10z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="prime-row">
+                <h6>Prime Gaming ile Al</h6>
+                <img alt="Prime Gaming Logosu" data-test-selector="prime-gaming-logo" height="150" width="260"
+                    src="https://static.twitchcdn.net/assets/prime-gaming-purple-c14b20e495295c7c06cd.svg">
+                <p>Prime Gaming ile favori yayıncınızı desteklerken aynı zamanda aylık oyunlar ve oyun ganimetleri
+                    ile başka bir sürü avantaja erişim kazanın.</p>
+                <div class="uye-button"><button class="uye">Ücretsiz Denemeye Başlayın</button></div>
+            </div>
+
+            <div class="prime-row">
+                <hr />
+            </div>
+            <div class="prime-row">
+                <h6>World of Tanks: Büyük Yakalama</h6>
+                <img height="150" width="260" src="https://images-na.ssl-images-amazon.com/images/I/61ZnALYaXwL.png"
+                    class="tw-border-radius-medium">
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <script>
+        function showFunction() {
+            var element = document.getElementById("show");
+            if (element.style.display == "none") {
+                element.style.display = "flex";
+            }
+            else {
+                element.style.display = "none";
+            }
+        }
+
+        function showFunction2() {
+            var element2 = document.getElementById("show-prime");
+            if (element2.style.display == "none") {
+                element2.style.display = "flex";
+            }
+            else {
+                element2.style.display = "none";
+            }
+        }
+
+        function showFunction3() {
+            var element3 = document.getElementById("show-login");
+            if (element3.style.display == "none") {
+                element3.style.display = "flex";
+            }
+            else {
+                element3.style.display = "none";
+            }
+        }
+
+        function showFunction4() {
+            var element4 = document.getElementById("show-menu");
+            if (element4.style.display == "none") {
+                element4.style.display = "flex";
+            }
+            else {
+                element4.style.display = "none";
+            }
+        }
+
+        function showFunction5() {
+            var element5 = document.getElementById("show-singin");
+            if (element5.style.display == "none") {
+                element5.style.display = "flex";
+            }
+            else {
+                element5.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
